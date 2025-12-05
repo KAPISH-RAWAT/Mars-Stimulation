@@ -5,7 +5,8 @@
 }
 
 .header {
-  height: 120vh;
+  /* Correction 1: Use min-height for stable full-screen view */
+  min-height: 100vh;
   width: 100vw;
   background-image: url(img1.jpg);
   background-size: cover;
@@ -13,10 +14,11 @@
   background-repeat: no-repeat;
 
   display: flex;
+  /* Correction 2: Align content to the top-center */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Change to flex-start for top alignment */
   flex-direction: column;
-  padding-left: 5vw;
+  padding-top: 15vh; /* Push content down from the top */
 
   /* Glassmorphism */
   background-color: rgba(255, 255, 255, 0.1);
@@ -27,17 +29,21 @@
 }
 
 .heading {
-  margin-right: 15vw;
+  /* Correction 2: Center the content and prevent extreme stretching */
+  margin: 0 auto; 
+  max-width: 900px;
+  padding: 0 5vw; /* Add lateral padding for small screens when centered */
 }
 
 #p1 {
-  line-height: 1.5;
+  /* Correction 3: Use clamp for stable, fluid font size */
+  font-size: clamp(3rem, 8vw + 3rem, 10rem);
+  line-height: 1.1; /* Reduced for better flow */
   letter-spacing: 2px;
-  font-size: 13vh;
   font-weight: 700;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh; /* Reduced margin */
 }
 
 #p1::after {
@@ -49,9 +55,10 @@
 }
 
 #p2 {
+  /* Correction 3: Use clamp for stable, fluid font size */
+  font-size: clamp(1rem, 0.8vw + 1rem, 1.5rem);
   color: white;
   font-weight: 400;
-  font-size: 2.8vh;
   font-family: "Roboto Condensed", sans-serif;
   word-spacing: 1.5px;
   max-width: 600px;
@@ -62,7 +69,7 @@
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   padding: 0.5em 1em;
-  margin-top: 12vh;
+  margin-top: 8vh; /* Adjusted vertical spacing */
   border-radius: 1em;
   border: none;
   outline: none;
@@ -80,63 +87,34 @@
 }
 
 /* ---------------------------------------------------
-   📱 RESPONSIVE DESIGN 
+   📱 RESPONSIVE DESIGN (Less changes needed now!)
 --------------------------------------------------- */
 
-/* Tablets (1024px and below) */
+/* Tablets (1024px and below) - Mostly fine due to clamp/centering */
 @media (max-width: 1024px) {
-  .header {
-    padding-left: 3vw;
-  }
-
-  .heading {
-    margin-right: 5vw;
-  }
-
-  #p1 {
-    font-size: 10vh;
-    margin-bottom: 8vh;
-  }
-
-  #p2 {
-    font-size: 2.4vh;
-  }
-
-  .pill {
-    font-size: 2.2vh;
-    margin-top: 8vh;
-  }
+  /* No major changes needed as centering and clamp handle most issues */
 }
 
 /* Large Phones (768px and below) */
 @media (max-width: 768px) {
   .header {
-    padding-left: 0;
+    /* Keep centering from your original code, adjusted slightly */
     justify-content: flex-start;
     text-align: center;
-    padding-top: 8vh;
+    padding-top: 10vh;
   }
 
   .heading {
-    margin-right: 0;
-  }
-
-  #p1 {
-    font-size: 7vh;
+    /* Centering is already handled by margin: 0 auto; */
+    padding: 0 5vw;
   }
 
   #p1::after {
     width: 40%;
-    margin: auto;
-  }
-
-  #p2 {
-    font-size: 2.2vh;
-    padding: 0 5vw;
+    margin: 0 auto; /* Ensure underline is centered */
   }
 
   .pill {
-    font-size: 2vh;
     margin-top: 6vh;
   }
 }
@@ -145,22 +123,6 @@
 @media (max-width: 480px) {
   .header {
     height: auto;
-    padding: 10vh 0 10vh 0;
-  }
-
-  #p1 {
-    font-size: 5.5vh;
-    letter-spacing: 1px;
-  }
-
-  #p2 {
-    font-size: 2vh;
-    padding: 0 6vw;
-  }
-
-  .pill {
-    font-size: 1.8vh;
-    padding: 0.5em 1.1em;
-    margin-top: 5vh;
+    padding: 8vh 0 8vh 0;
   }
 }
