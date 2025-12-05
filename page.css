@@ -21,63 +21,63 @@ section h1 {
   background: url("img2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-2 {
   background: url("img10.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-3 {
   background: url("img3.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-4 {
   background: url("img4.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-5 {
   background: url("img5.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-6 {
   background: url("img7.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-7 {
   background: url("img6.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-8 {
   background: url("img8.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-9 {
   background: url("img9.jpeg") no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .parallax-inner {
@@ -369,3 +369,4 @@ img {
     column-count: 1;
   }
 }
+
